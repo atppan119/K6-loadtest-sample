@@ -9,7 +9,7 @@ export let options = {
 };
 
 export default function () {
-  const response = http.post("YOUR_API", JSON.stringify(data), {
+  const response = http.get("YOUR_API", JSON.stringify(data), {
     headers: { "Content-Type": "application/json"},
   });
   check(response, { "status is 200": (r) => r.status === 200 });
